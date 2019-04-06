@@ -11,10 +11,10 @@ const forceSSL = function () {
         next();
     }
 }
-app.use(express.static(__dirname + '/dist/demo'));
+app.use(express.static(__dirname + '/dist/heroku-deployment'));
 
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/dist/demo/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/heroku-deployment/index.html'));
 });
 // Start the app by listening on the default
 // Heroku port
